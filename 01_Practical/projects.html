@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - NovaSpace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Nova<span>Space</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <h1>Featured Projects</h1>
+        <p>Explore recent web applications and development concepts.</p>
+      </div>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Student Portal Hub</h3>
+          <p>An academic dashboard project focused on tracking assignments, practical lab records, and student profiles.</p>
+          <span class="tech-tag">HTML5 / CSS Grid</span>
+          <button class="btn btn-accent btn-view-project" 
+                  data-name="Student Portal Hub" 
+                  data-details="This project features a fully responsive academic dashboard built using CSS Grid and client-side data state management.">View Details</button>
+        </article>
+
+        <article class="card">
+          <h3>Client Messaging Pipeline</h3>
+          <p>A client-side contact submission engine storing validated visitor records directly in localStorage.</p>
+          <span class="tech-tag">JavaScript / JSON</span>
+          <button class="btn btn-accent btn-view-project" 
+                  data-name="Client Messaging Pipeline" 
+                  data-details="Demonstrates privacy-preserving local storage array management using JSON.stringify and JSON.parse with array mutation algorithms.">View Details</button>
+        </article>
+
+        <article class="card">
+          <h3>Media Asset Manager</h3>
+          <p>A responsive gallery concept tailored for entertainment content creation and cinema asset management.</p>
+          <span class="tech-tag">CSS Flexbox / JS</span>
+          <button class="btn btn-accent btn-view-project" 
+                  data-name="Media Asset Manager" 
+                  data-details="Designed specifically for categorizing cinematic editing assets with smooth hover effects and mobile-first card grids.">View Details</button>
+        </article>
+
+        <article class="card">
+          <h3>Algorithm Visualizer</h3>
+          <p>An interactive educational tool demonstrating dynamic programming, arrays, and sorting algorithms.</p>
+          <span class="tech-tag">Vanilla JS</span>
+          <button class="btn btn-accent btn-view-project" 
+                  data-name="Algorithm Visualizer" 
+                  data-details="Visualizes dynamic array operations and execution states directly in the web browser using DOM manipulation.">View Details</button>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- Interactive Modal Popup -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+      <h3 id="modalTitle">Project Title</h3>
+      <p id="modalDesc">Project description goes here.</p>
+      <button class="btn btn-secondary" id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 NovaSpace – Student & Creative Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

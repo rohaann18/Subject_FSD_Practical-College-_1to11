@@ -1,0 +1,19 @@
+{
+  "name": "event-planner-app",
+  "version": "1.0.0",
+  "description": "EVENTORA PRO college practical for rule-based venue recommendations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "event-planner",
+    "express",
+    "college-practical"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

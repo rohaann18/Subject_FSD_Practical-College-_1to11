@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin System - NovaSpace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Nova<span>Admin</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Back to Website</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Academic Disclaimer Note -->
+      <div class="demo-note">
+        <strong>Academic Practical Note:</strong> This is a client-side JavaScript demonstration. Password verification and session states are managed using browser <code>localStorage</code> and <code>sessionStorage</code> for educational purposes.
+      </div>
+
+      <!-- 1. LOGIN SECTION -->
+      <section id="loginSection" class="auth-card">
+        <div class="card">
+          <h3 style="text-align: center; margin-bottom: 1rem;">Admin Login</h3>
+          
+          <div id="loginStatus" class="status-message"></div>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginUserEmail">Username or Email</label>
+              <input type="text" id="loginUserEmail" class="form-control" placeholder="Enter username or email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter password" required>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width: 100%;">Login</button>
+          </form>
+
+          <div class="auth-links">
+            <a href="#" id="showSignupLink">Create Admin Account</a>
+            <a href="#" id="showForgotLink">Forgot Password?</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. SIGN UP SECTION -->
+      <section id="signupSection" class="auth-card" style="display: none;">
+        <div class="card">
+          <h3 style="text-align: center; margin-bottom: 1rem;">Create Admin Account</h3>
+          
+          <div id="signupStatus" class="status-message"></div>
+
+          <form id="signupForm">
+            <div class="form-group">
+              <label for="signupName">Full Name</label>
+              <input type="text" id="signupName" class="form-control" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupUsername">Username</label>
+              <input type="text" id="signupUsername" class="form-control" placeholder="johndoe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">Email Address</label>
+              <input type="email" id="signupEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" id="signupPassword" class="form-control" placeholder="Create password" required>
+            </div>
+
+            <div class="form-group">
+              <label for="signupConfirmPassword">Confirm Password</label>
+              <input type="password" id="signupConfirmPassword" class="form-control" placeholder="Confirm password" required>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width: 100%;">Create Account</button>
+          </form>
+
+          <div class="auth-links" style="justify-content: center;">
+            <a href="#" class="back-to-login">Already have an account? Login</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FORGOT PASSWORD SECTION -->
+      <section id="forgotSection" class="auth-card" style="display: none;">
+        <div class="card">
+          <h3 style="text-align: center; margin-bottom: 1rem;">Reset Password</h3>
+          
+          <div id="forgotStatus" class="status-message"></div>
+
+          <form id="forgotForm">
+            <div class="form-group">
+              <label for="forgotEmail">Registered Email</label>
+              <input type="email" id="forgotEmail" class="form-control" placeholder="Enter your registered email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="forgotNewPassword">New Password</label>
+              <input type="password" id="forgotNewPassword" class="form-control" placeholder="Enter new password" required>
+            </div>
+
+            <button type="submit" class="btn btn-accent" style="width: 100%;">Update Password</button>
+          </form>
+
+          <div class="auth-links" style="justify-content: center;">
+            <a href="#" class="back-to-login">Back to Login</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. PROTECTED ADMIN DASHBOARD -->
+      <section id="dashboardSection" style="display: none;">
+        <div class="dashboard-header">
+          <div>
+            <h2>Welcome, <span id="adminWelcomeName">Admin</span></h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">NovaSpace Protected Administration Console</p>
+          </div>
+          <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+        </div>
+
+        <div class="dashboard-summary">
+          <div class="summary-card">
+            <h4>Total Messages</h4>
+            <div class="count" id="messageCountDisplay">0</div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3>Submitted Messages</h3>
+          <button id="deleteAllBtn" class="btn btn-danger btn-sm">Delete All Messages</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="messagesTableBody">
+              <!-- Dynamically populated via script.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 NovaSpace – Admin Interface</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

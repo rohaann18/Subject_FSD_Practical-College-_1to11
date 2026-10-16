@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find a suitable venue for meetings, birthdays and concerts.">
+  <title>EVENTORA PRO | Premium Event Planning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="EVENTORA PRO home">
+        <span class="brand-mark">E</span>
+        <span><strong>EVENTORA PRO</strong>
+          <small>Plan the right event at the right place.</small></span>
+      </a>
+      <nav aria-label="Main navigation"><a href="#home">Home</a>
+        <a class="nav-cta" href="#planner">Plan Event</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Thoughtful venue recommendations</p>
+          <h1>Perfect Events Start with the <em>Perfect Place.</em></h1>
+          <p class="hero-text">Choose your event, location and guest count to discover a venue that fits.</p>
+          <a class="button button-gold" href="#planner">Plan Your Event</a>
+        </div>
+        <div class="hero-panel" aria-label="Events we help plan">
+          <div class="hero-panel-top"><span>Curated for your occasion</span>
+            <span class="gold-line"></span></div>
+          <div class="occasion-list">
+            <article>
+              <span class="occasion-number">01</span>
+              <div><h2>Company Meetings</h2>
+                <p>Focused, polished and professional.</p></div>
+            </article>
+            <article>
+              <span class="occasion-number">02</span>
+              <div><h2>Birthday Celebrations</h2>
+                <p>Warm spaces for lasting memories.</p></div>
+            </article>
+            <article>
+              <span class="occasion-number">03</span>
+              <div><h2>Music Concerts</h2>
+                <p>Large venues made for live energy.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="planner-section" id="planner">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Venue finder</p>
+          <h2>Plan Your Perfect Event</h2>
+          <p>Tell us the essentials. We will match all three requirements.</p>
+        </div>
+        <form class="finder-form" id="venue-form" novalidate>
+          <div class="field-group">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="eventType" required>
+              <option value="">Choose an event</option>
+              <option value="Company Meeting">Company Meeting</option>
+              <option value="Birthday Celebration">Birthday Celebration</option>
+              <option value="Music Concert">Music Concert</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="location">Location</label>
+            <select id="location" name="location" required>
+              <option value="">Choose a city</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Gandhinagar">Gandhinagar</option>
+              <option value="Vadodara">Vadodara</option>
+              <option value="Surat">Surat</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="crowd-size">Crowd Size</label>
+            <input id="crowd-size" name="crowdSize" type="number"
+              min="1" step="1" placeholder="e.g. 100" required>
+          </div>
+          <button class="button submit-button" id="submit-button" type="submit">Find Suitable Venue</button>
+          <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <section class="results-section" aria-labelledby="results-title">
+      <div class="container">
+        <div class="results-heading">
+          <div><p class="eyebrow">Our recommendation</p>
+            <h2 id="results-title">Suitable Venues</h2></div>
+          <p class="result-count" id="result-count"></p>
+        </div>
+        <div class="results-grid" id="results" aria-live="polite">
+          <div class="empty-state">
+            <span class="empty-symbol">E</span>
+            <h3>Your perfect event space is waiting.</h3>
+            <p>Complete the planner above to see venues selected for your needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <p>EVENTORA PRO</p><p>Plan the right event at the right place.</p>
+    </div>
+  </footer>
+  <script src="../venues.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

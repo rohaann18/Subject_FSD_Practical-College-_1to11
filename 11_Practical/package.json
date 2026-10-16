@@ -1,0 +1,15 @@
+{
+  "name": "nutrition-food-app",
+  "version": "1.0.0",
+  "description": "NutriPick - a rule-based food recommendation college practical",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["nutrition", "food", "recommendation", "express"],
+  "author": "College Practical",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

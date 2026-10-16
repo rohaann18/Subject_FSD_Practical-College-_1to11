@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card home-card">
+    <h1>Online MCQ Quiz</h1>
+    <p>Choose a topic and test your basic web development knowledge.</p>
+
+    <label for="topic">Quiz topic</label>
+    <select id="topic">
+      <option value="">Loading topics...</option>
+    </select>
+
+    <button id="startButton" type="button">Start Quiz</button>
+    <p id="message" class="message" aria-live="polite"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

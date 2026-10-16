@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edit a saved travel experience.">
+  <title>Edit Travel Experience | Travel Log</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div>
+        <a class="site-title" href="index.html">Travel Log</a>
+        <p class="site-subtitle">Explore and share travel experiences</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="add-travel.html">Share Experience</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container form-page-container">
+    <section class="form-introduction">
+      <p class="eyebrow">Update your journey</p>
+      <h1>Edit Travel Experience</h1>
+      <p>Make changes to your saved travel experience.</p>
+    </section>
+
+    <div
+      id="form-message"
+      class="form-message show info"
+      role="status"
+      aria-live="polite"
+    >Loading travel experience...</div>
+
+    <form id="edit-travel-form" class="travel-form" hidden>
+      <div class="form-group">
+        <label for="title">Travel Title <span aria-hidden="true">*</span></label>
+        <input id="title" name="title" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location <span aria-hidden="true">*</span></label>
+        <input id="location" name="location" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="travelDate">Travel Date <span aria-hidden="true">*</span></label>
+        <input id="travelDate" name="travelDate" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input
+          id="imageUrl"
+          name="imageUrl"
+          type="url"
+          placeholder="https://example.com/travel.jpg"
+          aria-describedby="image-help"
+        >
+        <small id="image-help">Optional - leave blank to use the default travel image.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Travel Experience <span aria-hidden="true">*</span></label>
+        <textarea id="description" name="description" rows="7" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button id="update-button" class="button button-primary" type="submit" disabled>
+          Update Experience
+        </button>
+        <a class="button button-secondary" href="index.html">Cancel</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>Travel Log &mdash; Keep your journeys remembered.</p>
+  </footer>
+
+  <script src="js/live-data.js"></script>
+  <script src="js/edit-travel.js"></script>
+</body>
+</html>

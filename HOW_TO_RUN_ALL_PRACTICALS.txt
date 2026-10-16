@@ -1,0 +1,36 @@
+FSD PRACTICALS 1 TO 4 - WINDOWS RUN GUIDE
+
+Pehle ZIP extract karo. Practical 3 aur 4 ke liye Node.js LTS install hona chahiye.
+VS Code Live Server extension sirf Practical 1 aur 2 ke liye use karo.
+
+PRACTICAL 1 - NovaSpace Website
+1. 01_Practical folder VS Code mein open karo.
+2. index.html open karo.
+3. Right-click karke Open with Live Server select karo.
+4. Website browser mein open ho jayegi.
+
+PRACTICAL 2 - Student Assistant Chatbot
+1. 02_Practical folder VS Code mein open karo.
+2. index.html open karo.
+3. Right-click karke Open with Live Server select karo.
+4. Suggested question click karo ya apna question type karke Send dabao.
+
+PRACTICAL 3 - Online MCQ Quiz
+1. 03_Practical folder VS Code mein open karo.
+2. VS Code Terminal mein command chalao: node server.js
+3. Terminal mein dikhaya gaya URL browser mein open karo (normally http://localhost:3000).
+4. Agar port busy ho to PowerShell mein chalao: $env:PORT=3100; node server.js
+5. Server band karne ke liye terminal mein Ctrl+C dabao.
+
+Live Server alone Practical 3 ko nahi chala sakta, kyunki quiz APIs aur score
+calculation Node.js backend karta hai.
+
+PRACTICAL 4 - React Login and Registration
+1. react-login-system folder VS Code mein open karo.
+2. VS Code Terminal mein pehli baar command chalao: npm install
+3. Uske baad command chalao: npm run dev
+4. Terminal mein dikhaya gaya Local URL browser mein open karo.
+5. App band karne ke liye terminal mein Ctrl+C dabao.
+
+Live Server alone Practical 4 ko nahi chala sakta, kyunki JSX ko Vite compile
+karta hai. Dusre PC par node_modules copy mat karo; npm install se fresh banega.
